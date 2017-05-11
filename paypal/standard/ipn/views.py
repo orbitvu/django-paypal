@@ -85,6 +85,8 @@ def ipn(request):
 
     if ipn_obj is None:
         ipn_obj = PayPalIPN()
+        if data and data.get('invoice'):
+            ipn_obj.invoice = data.get('invoice')
 
     # Set query params and sender's IP address
     ipn_obj.initialize(request)
