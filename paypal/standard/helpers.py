@@ -51,7 +51,7 @@ def make_secret(form_instance, secret_fields=None):
 
     # Build the secret with fields availible in both PaymentForm and the IPN. Order matters.
     if secret_fields is None:
-        secret_fields = ['business', 'item_name']
+        secret_fields = ['business', 'invoice']
 
     data = ""
     for name in secret_fields:
