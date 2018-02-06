@@ -238,7 +238,7 @@ class PayPalStandardBase(Model):
         abstract = True
         app_label = 'paypal_standard_base'  # Keep Django 1.7 quiet
 
-    def __unicode__(self):
+    def __str__(self):
         if self.is_transaction():
             return self.format % ("Transaction", self.txn_id)
         elif self.is_subscription():

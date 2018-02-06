@@ -109,7 +109,7 @@ class PayPalPDTAdmin(admin.ModelAdmin):
                  ],
         }),
     )
-    list_display = ["__unicode__",
+    list_display = ["__str__",
                     "flag",
                     "invoice",
                     "custom",
