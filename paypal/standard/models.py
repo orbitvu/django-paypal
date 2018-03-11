@@ -381,7 +381,7 @@ class PayPalStandardBase(Model):
         """Verifies an IPN payment over SSL using EWP."""
         warn_untested()
         if not check_secret(form_instance, secret):
-            self.set_flag("Invalid secret. (%s)") % secret
+            self.set_flag("Invalid secret. (%s)" % secret)
         self.save()
 
     def get_endpoint(self):
